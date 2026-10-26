@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bombastic Studio</title>
+  <meta name="description" content="Bombastic Studio — handcrafted goods. Coming soon." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f6f1ea;
+      color: #2b2118;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #6b5a4a;
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: #2b2118;
+      color: #f6f1ea;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn:hover { background: #8a5a2b; transform: translateY(-2px); }
+
+    form {
+      margin-top: 28px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    input[type="email"] {
+      padding: 12px 18px;
+      border: 1px solid #c9b8a5;
+      border-radius: 999px;
+      width: 260px;
+      font-size: 0.95rem;
+      background: #fff;
+    }
+    form button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 999px;
+      background: #8a5a2b;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: #8c7b6a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Bombastic Studio</div>
+    <nav>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="mailto:hello@bombasticstudio.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bombastic<br />Studio</h1>
+    <p class="tagline">Handcrafted pieces, made with care. Our shop is opening soon.</p>
+    <a href="#" class="btn">Coming Soon</a>
+
+    <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll keep you posted.');">
+      <input type="email" placeholder="Your email" required />
+      <button type="submit">Notify Me</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Bombastic Studio. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
